@@ -1,48 +1,68 @@
+import java.io.*;
+import java.lang.*;
+import java.lang.Math;
 import java.util.Scanner;
-
-class Main {
-  public static void main(String[] args) {
-
-    char operator;
-    Double number1, number2, result;
-
-    Scanner input = new Scanner(System.in);
-
-    System.out.println("Choose an operator: +, -, *, or /");
-    operator = input.next().charAt(0);
-
-    System.out.println("Enter first number");
-    number1 = input.nextDouble();
-
-    System.out.println("Enter second number");
-    number2 = input.nextDouble();
-
-    switch (operator) {
-
-      case '+':
-        result = number1 + number2;
-        System.out.println(number1 + " + " + number2 + " = " + result);
-        break;
-
-      case '-':
-        result = number1 - number2;
-        System.out.println(number1 + " - " + number2 + " = " + result);
-        break;
-
-      case '*':
-        result = number1 * number2;
-        System.out.println(number1 + " * " + number2 + " = " + result);
-        break;
-
-      case '/':
-        result = number1 / number2;
-        System.out.println(number1 + " / " + number2 + " = " + result);
-        break;
-
-      default:
-        System.out.println("Operator Invalid !");
-        break;
+public class BasicCalculator {
+  
+    public static void main(String[] args)
+    {
+        // stores two numbers
+        double num1, num2;
+  
+        // Take input from the user
+        Scanner sc = new Scanner(System.in);
+  
+        System.out.println("Enter the numbers");
+  
+        // take the inputs
+        num1 = sc.nextDouble();
+  
+        num2 = sc.nextDouble();
+  
+        System.out.println("Enter the operator (+,-,*,/)");
+  
+        char op = sc.next().charAt(0);
+  
+        double o = 0;
+  
+        switch (op) {
+  
+        case '+':
+  
+            o = num1 + num2;
+  
+            break;
+  
+        case '-':
+  
+            o = num1 - num2;
+  
+            break;
+  
+        case '*':
+  
+            o = num1 * num2;
+  
+            break;
+  
+        case '/':
+  
+            o = num1 / num2;
+  
+            break;
+  
+        default:
+  
+            System.out.println("You enter wrong input");
+  
+            break;
+        }
+  
+        System.out.println("The final result:");
+  
+        System.out.println();
+  
+        System.out.println(num1 + " " + op + " " + num2
+                           + " = " + o);
     }
-    input.close();
-  }
 }
