@@ -1,1 +1,1 @@
-# Hacktoberfest-2021-Java
+# Hacktoberfest-2022
