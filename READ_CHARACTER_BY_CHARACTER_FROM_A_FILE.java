@@ -1,4 +1,4 @@
-# to read file character by character
+#to read file character by character
 file = open('YourTextFile.txt', 'r')
  
 while 1:
