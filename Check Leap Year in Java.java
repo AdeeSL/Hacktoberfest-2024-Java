@@ -1,6 +1,6 @@
 public class Main {
   public static void main(String[] args) {
-    int year = 2020;
+    int year = 2024;
     boolean isLeapYear;
 
     isLeapYear = (year % 4 == 0);
